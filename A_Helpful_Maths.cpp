@@ -12,7 +12,7 @@ int main()
 
     // take digits from string
     for(int i = 0; str[i] != '\0'; i++){
-        if(str[i] != '+'){
+        if(str[i] != '+' && str[i]!='\n'){
             arr[c++] = str[i];
         }
     }
@@ -27,8 +27,10 @@ int main()
     }
 
     // print result correctly
-    for(int i = 0; i < c; i++){
-        cout << arr[i];
-        if(i != c-1) cout << "+";
+    for(int i = 0; i<c; i++){
+        cout<<arr[i];
+        if(i!=c-1){
+        	cout<<"+";
+		}
     }
 }
